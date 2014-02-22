@@ -1,0 +1,247 @@
+<!doctype html>  
+<html lang="en">
+	
+	<head>
+		<meta charset="utf-8">
+		
+		<title>CSS</title>
+
+		<meta name="description" content="An introduction to CSS">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		
+		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<script>
+			// If the query includes 'print-pdf' we'll use the PDF print sheet
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+	
+	<body>
+		
+		<div class="reveal">
+
+			<!-- Used to fade in a background when a specific slide state is reached -->
+			<div class="state-background"></div>
+			
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>CSS Essentials</h1>
+				</section>
+				
+				<section>
+					<h2>What?</h2>
+					<p>
+						<br/><br/>
+						HTML : Structure : : CSS : Style
+					</p>
+				</section>
+
+
+				<section>
+					<h2>Types of Stylesheets</h2>
+					<ul>
+						<li class="fragment">Browser</li>
+						<li class="fragment">User</li>
+						<li class="fragment"><em>Author</em> &larr; We'll discuss this</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Anatomy</h2>
+					<p>
+						<code style="font-size: 3em;line-height:1.6;height:300px;">
+							<pre class="fragment">
+<span class="fragment">SELECTOR</span> <span class="fragment">{</span>
+  <span class="fragment">PROPERTY:</span> <span class="fragment">VALUE ;
+}</span>
+							</pre>
+						</code>
+					</p>
+				</section>
+
+
+
+				<section>
+					<h2>Selectors</h2>
+					<p>3 types</p>
+					<ul>
+						<li class="fragment">Element</li>
+						<li class="fragment">Class</li>
+						<li class="fragment">ID</li>
+					</ul>
+				</section>
+				<section class="stack">
+					<section>
+						<h2>Element Selectors</h2>
+						<p><br/>						<code>
+								<pre>
+	/* 
+	Example
+	ELEMENT { DECLARATION }
+	*/
+
+	h1 {
+	  color: blue;
+	}
+							</pre>
+							</code>
+						</p>
+					</section>
+
+					<section>
+						<h2>Class Selectors</h2>
+						<p><br/>						<code>
+								<pre>
+	/* 
+	Example
+	.CLASS { DECLARATION }
+	*/
+
+	.heading {
+	  border-bottom: 1px solid #999;
+	}
+							</pre>
+							</code>
+						</p>
+					</section>
+
+					<section>
+						<h2>ID Selectors</h2>
+						<p><br/>						<code>
+								<pre>
+	/* 
+	Example
+	#ID { DECLARATION }
+	*/
+
+	#sidebar {
+	  float: right;
+	  width: 220px;
+	}
+							</pre>
+							</code>
+						</p>
+					</section>
+				</section>
+
+				<section>
+					<h3>A Demo is worth 1000 slides :p</h3>
+						<p>
+							<a href="http://dabblet.com/gist/3904021">playground</a>
+						</p>
+				</section>
+
+				<section>
+					<h2>Values &amp; Properties</h2>
+					<ul style="float:left">
+						<li class="fragment">Colors</li>
+						<li class="fragment">Fonts</li>
+						<li class="fragment">Margin/Padding</li>
+						<li class="fragment">Borders</li>
+						<li class="fragment">Background</li>
+						<li class="fragment">Floats</li>
+						<li class="fragment">Positions</li>
+					</ul>
+					<span style="clear:both"></span>
+				</section>
+
+				<section>
+					<h2>linking</h2>
+					<p>
+					<code>
+						<pre>
+&lthead&gt;
+&hellip;
+&lt;link href="style.css" rel="stylesheet" /&gt;
+&hellip;
+&lt;/head&gt;							
+						</pre>
+					</code>
+					</p>
+				</section>
+
+				<section>
+					<h2>Back to story!</h2>
+				</section>
+
+				<section>
+					<h2>Welcome back!</h2>
+				</section>
+
+				<section>
+					<h2>More selectors</h2>
+					<br />
+					<ul style="float:left">
+						<li class="fragment">Multiple</li>
+						<li class="fragment">Descendant</li>
+						<li class="fragment">child</li>
+						<li class="fragment">next adjacent</li>
+						<li class="fragment">silings</li>
+						<li class="fragment">first element</li>
+						<li class="fragment">first child</li>
+						<li class="fragment">Odd/even</li>
+					</ul>
+					<span style="clear:both"></span>
+				</section>
+
+				<section>
+					<p>But I can only show you the door. You're the one that has to walk through it.</p>
+				</section>
+			</div>
+
+			<!-- The navigational controls UI -->
+			<aside class="controls">
+				<a class="left" href="#">&#x25C4;</a>
+				<a class="right" href="#">&#x25BA;</a>
+				<a class="up" href="#">&#x25B2;</a>
+				<a class="down" href="#">&#x25BC;</a>
+			</aside>
+
+			<!-- Presentation progress bar -->
+			<div class="progress"><span></span></div>
+			
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+			
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				
+				theme: Reveal.getQueryHash().theme || 'default', // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/linear(2d)
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/highlight.js', async: true, callback: function() { window.hljs.initHighlightingOnLoad(); } },
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'lib/js/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'lib/js/data-markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '/socket.io/socket.io.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } },
+					{ src: 'plugin/speakernotes/client.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } },
+				]
+			});
+			
+		</script>
+
+	</body>
+</html>
